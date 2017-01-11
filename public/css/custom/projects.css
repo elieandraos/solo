@@ -1,0 +1,36 @@
+div.tag-color
+{
+	margin-top: -25px;
+}
+table#project-tags
+{
+	margin-bottom: 40px;
+}
+table#project-tags tbody tr td
+{
+	border-top: 0;
+}
+input.tag-name
+{
+	width: 45%;
+}
+.tag-color
+{
+	display: none;
+}
+.tag-color .tag-pill
+{
+	padding: 1px 3px;
+	margin-left: 5px;
+	font-size: 50%;
+	cursor: pointer;
+}
+.tag-color .tag-pill.active-tag,
+.tag-color .tag-pill.hover-tag
+{
+	padding: 4px 6px;
+}
+.remove-tag
+{
+	margin-left: 10px;
+}

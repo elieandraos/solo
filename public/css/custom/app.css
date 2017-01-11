@@ -1,0 +1,28 @@
+*
+{
+	font-family: 'Lato' !important;
+}
+.hidden
+{
+	display: none;
+}
+.site-menu-icon, .icon
+{
+	font-family: 'Web Icons' !important;
+}
+.panel-title
+{
+	font-weight: 200;
+	text-transform: capitalize;
+}
+.line
+{
+	border-top: none;
+	border-left: none;
+	border-right: none;
+	border-width: 1px;
+}
+.input-group input
+{
+	font-size: 12px;
+}
