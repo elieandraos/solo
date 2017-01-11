@@ -42,5 +42,17 @@ class Project extends Model
         return Carbon::createFromFormat('Y-m-d', $date)->format('D, d M Y');
     }
 
+    /**
+     * Remaning time (in days) to end the project.
+     * 
+     * @return type
+     */
+    public function getTimeRemainingAttribute()
+    {
+        $end = Carbon::parse($this->due_date);
+        $now = Carbon::now();
+        return $end->diffInDays($now);
+    }
+
 
 }

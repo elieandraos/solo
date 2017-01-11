@@ -19,6 +19,17 @@ class ProjectController extends Controller
 	}
 
     /**
+     * List the projects.
+     * 
+     * @return type
+     */
+    public function index()
+    {
+        return view('app.projects.index', ['projects' => Project::all()]);
+        //tasks, files, calendar, people, edit
+    }
+
+    /**
      * Create project.
      * 
      * @return type

@@ -24,6 +24,7 @@ Route::group(['middleware' => ['auth']], function(){
 	Route::get('/logout', ['uses' => 'LoginController@logout', 'as' => 'auth.logout']);
 	Route::get('/dashboard', ['uses' => 'DashboardController@index', 'as' => 'dashboard']);
 	//projects
+	Route::get('/projects', ['uses' => 'ProjectController@index', 'as' => 'projects.index']);
 	Route::get('/projects/create', ['uses' => 'ProjectController@create', 'as' => 'projects.create']);
 	Route::post('/projects/store', ['uses' => 'ProjectController@store', 'as' => 'projects.store']);
 	Route::get('/projects/{projectId}/edit', ['uses' => 'ProjectController@edit', 'as' => 'projects.edit']);

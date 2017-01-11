@@ -34,3 +34,24 @@ input.tag-name
 {
 	margin-left: 10px;
 }
+
+.project-card
+{
+	padding: 18px 20px 20px;
+    border: 1px solid #D5E4F1;
+    color: #000;
+}
+.project-card .action-list
+{
+	margin-top: 15px;
+	margin-bottom: 15px;
+}
+.project-card .action-list button
+{
+	margin-right: 5px;
+}
+.project-card .time-tracker
+{
+	font-weight: 200;
+	font-size: 12px;
+}
