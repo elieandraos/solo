@@ -21,6 +21,16 @@ class Project extends Model
     }
 
     /**
+     * Tasks relation.
+     * 
+     * @return type
+     */
+    public function tasks()
+    {
+        return $this->hasMany('App\Models\Task');
+    }
+
+    /**
      * Start date accessor: change the format when displayed.
      * 
      * @param type $date 

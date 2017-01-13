@@ -18,4 +18,14 @@ class Tag extends Model
     {
     	return $this->belongsTo('App\Models\Project');
     }
+
+    /**
+     * Task relation.
+     * 
+     * @return type
+     */
+    public function tasks()
+    {
+        return $this->belongsToMany('App\Models\Task', 'tag_task');
+    }
 }
