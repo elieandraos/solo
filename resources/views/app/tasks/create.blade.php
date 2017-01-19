@@ -10,5 +10,6 @@
     <div class="col-md-4 sidebar">
         @include('app.tasks._duedate')
         @include('app.tasks._tags')
+        @include('app.tasks._about')
     </div>
 </div>

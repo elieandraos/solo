@@ -8,9 +8,12 @@
 
 <div class="checklist-input" id="checklist-skeleton">
 	<div class="checkbox-custom" >
-		<input type="checkbox" name="checkbox" />
+		<input type="checkbox" name="checkbox" class="complete-checklist" />
 		<label class="item-title">
 			<input type="text" class="form-control form-control-sm checklist-item" onfocus="handleFocusEvents(this)">
 		</label>
 	</div>
+	<button type="button" class="btn btn-icon btn-grey-500 btn-pure btn-xs remove-checklist">
+        <i class="icon wb-close"></i> 
+    </button>
 </div>

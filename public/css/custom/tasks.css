@@ -18,6 +18,12 @@
 {
 	margin-bottom: 20px;
 }
+.create-task-modal .sidebar-group.about
+{
+	font-weight: 200;
+    color: #000;
+    font-size: 11px;
+}
 .create-task-modal .body
 {
 	padding-top: 20px;
@@ -42,6 +48,8 @@
     height: auto;
     padding: 6px;
 }
+
+/** Bootstrap select **/
 .bootstrap-select
 {
 	background-color: transparent;
@@ -77,7 +85,6 @@
 	padding-bottom: 5px;
 }
 
-
 /** Checklist **/
 div.checklist-input
 {
@@ -85,14 +92,26 @@ div.checklist-input
 	height: 36px;
 	padding: 6px;
 	border: 1px solid #4397e6;
+	position: relative;
 } 
 div.checklist-input.has-value
 {
 	border: 1px solid transparent;
 }
-div.checklist-input.focus-checklist
+.checklist-input.has-value:hover
+{
+	background-color: #F3F7F9;
+}
+.checklist-input.has-value:hover .remove-checklist
+{
+	display: block;
+}
+
+div.checklist-input.focus-checklist,
+div.checklist-input.focus-checklist:hover
 {
 	border: 1px solid #4397e6;
+	background-color: transparent;
 }
 div.checklist-input .checkbox-custom
 {
@@ -108,8 +127,22 @@ div.checklist-input .checkbox-custom label.item-title input
 	padding: 0;
 	border: none;
 	font-size: 13px;
+	width: 90%;
+}
+div.checklist-input .checkbox-custom label.item-title input.completed
+{
+	text-decoration: line-through; 
 }
 #checklist-skeleton
 {
 	display: none;
+}
+.remove-checklist,
+div.checklist-input.focus-checklist:hover .remove-checklist
+{
+	position: absolute;
+	right: 0;
+	top: 5px;
+	display: none;
+	cursor: pointer;
 }
