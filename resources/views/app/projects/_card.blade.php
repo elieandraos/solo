@@ -10,9 +10,11 @@
 			</button>
 		</a>
 
-		<button type="button" class="btn btn-icon btn-dark btn-outline" data-toggle="tooltip" data-original-title="Tasks">
-			<i class="icon wb-check" aria-hidden="true"></i>
-		</button>
+		<a href="{!! route('tasks.index', $project->id) !!}">
+			<button type="button" class="btn btn-icon btn-dark btn-outline" data-toggle="tooltip" data-original-title="Tasks">
+				<i class="icon wb-check" aria-hidden="true"></i>
+			</button>
+		</a>
 
 		<button type="button" class="btn btn-icon btn-dark btn-outline" data-toggle="tooltip" data-original-title="Files">
 			<i class="icon wb-paperclip" aria-hidden="true"></i>

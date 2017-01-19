@@ -8,6 +8,7 @@ use App\Models\Project;
 
 class ProjectRepository
 {
+
 	/**
 	 * Create project.
 	 * 

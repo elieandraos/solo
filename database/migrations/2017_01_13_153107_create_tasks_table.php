@@ -17,7 +17,6 @@ class CreateTasksTable extends Migration
             $table->string('name');
             $table->date('start_date');
             $table->date('due_date');
-            $table->boolean('status');
 
             $table->integer('type_id')->unsigned();
             $table->foreign('type_id')

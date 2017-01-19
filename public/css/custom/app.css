@@ -2,9 +2,25 @@
 {
 	font-family: 'Lato' !important;
 }
+.form-control.focus, .form-control:focus
+{
+	outline: none;
+}
+.checkbox-custom input[type=radio]:focus+label::before, 
+.checkbox-custom input[type=checkbox]:focus+label::before
+{
+	outline: 0;
+    outline-offset: 0;
+}
 .hidden
 {
 	display: none;
+}
+a
+{
+	font-size: 13px;
+    font-weight: 200;
+    color: #4397e6;
 }
 .site-menu-icon, .icon
 {

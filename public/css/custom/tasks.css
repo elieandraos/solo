@@ -1,0 +1,115 @@
+.create-task-modal
+{
+	border-top: 1px solid #eee;
+    margin-top: -20px;
+}
+.modal-body > .create-task-modal
+{
+	padding-bottom: 0;
+}
+.create-task-modal .sidebar
+{
+	background-color: #F3F7F9;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	min-height: 320px;
+}
+.create-task-modal .sidebar-group
+{
+	margin-bottom: 20px;
+}
+.create-task-modal .body
+{
+	padding-top: 20px;
+	padding-bottom: 0px;
+}
+.create-task-modal label
+{
+	font-weight: 200;
+	color: #424242;
+	font-size: 13px;
+}
+.create-task-modal label span
+{
+	margin-right: 10px;
+}
+.create-task-modal input
+{
+    color: #000;
+    font-weight: 200;
+    background: transparent;
+    font-size: 12px;
+    height: auto;
+    padding: 6px;
+}
+.bootstrap-select
+{
+	background-color: transparent;
+}
+.bootstrap-select .dropdown-toggle:focus
+{
+	outline: none !important;
+	background-color: transparent !important;
+}
+.bootstrap-select.btn-group .dropdown-toggle .filter-option
+{
+	font-weight: 200;
+}
+.bootstrap-select button
+{
+	background: transparent;
+    font-size: 12px;
+    border-radius: 0;
+    border-color: #e4eaec;
+    padding: 6px;
+    color: #000;
+}
+.create-task-modal .sidebar .btn-default.active, 
+.create-task-modal .btn-default:active, 
+.create-task-modal .open>.btn-default.dropdown-toggle
+{
+	background-color: transparent;
+}
+.bootstrap-select.btn-group .dropdown-menu li 
+{
+	padding-left: 10px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+
+/** Checklist **/
+div.checklist-input
+{
+	width: 100%;
+	height: 36px;
+	padding: 6px;
+	border: 1px solid #4397e6;
+} 
+div.checklist-input.has-value
+{
+	border: 1px solid transparent;
+}
+div.checklist-input.focus-checklist
+{
+	border: 1px solid #4397e6;
+}
+div.checklist-input .checkbox-custom
+{
+	margin-top: 0;
+	margin-bottom: 0;
+}
+div.checklist-input .checkbox-custom label.item-title 
+{
+	width: 100%;
+}
+div.checklist-input .checkbox-custom label.item-title input
+{
+	padding: 0;
+	border: none;
+	font-size: 13px;
+}
+#checklist-skeleton
+{
+	display: none;
+}

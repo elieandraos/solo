@@ -3,7 +3,7 @@
 use App\Models\User;
 use Illuminate\Database\Seeder;
 
-class UsersTableSeeder extends Seeder
+class UsersTableSeeder extends DatabaseSeeder
 {
     /**
      * Run the database seeds.
@@ -12,6 +12,8 @@ class UsersTableSeeder extends Seeder
      */
     public function run()
     {
+        $this->cleanUp('users');
+
         User::create([
 			"email" => "elieandraos31@gmail.com",
 			"name" => "Elie Andraos",
