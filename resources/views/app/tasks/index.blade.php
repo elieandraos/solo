@@ -7,13 +7,13 @@
         </div>
 
 		<div class="panel-body">
-
-            <button type="button" class="btn btn-floating btn-primary pull-xs-right" 
+            @include('app.tasks._columns')
+            {{-- <button type="button" class="btn btn-floating btn-primary pull-xs-right" 
             		data-toggle="tooltip" data-original-title="Create Task" 
             		data-modal="remote" data-modal-url="{!! route('tasks.create', [$project->id]) !!}" 
                     data-modal-title="Task Details" data-modal-callback="initCreateModal">
                 <i class="icon wb-plus" aria-hidden="true"></i>
-            </button>
+            </button> --}}
           
 		</div>
 	</div>

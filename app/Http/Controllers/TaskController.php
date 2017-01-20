@@ -25,12 +25,25 @@ class TaskController extends Controller
     }
 
     /**
+     * Store a task in the database.
+     * 
+     * @param Request $request 
+     * @param Project $project 
+     * @return type
+     */
+    public function store(Request $request, Project $project)
+    {
+        dd($request->all());
+        return;
+    }
+
+    /**
      * Create a project task.
      * 
      * @param Project $project 
      * @return type
      */
-    public function create(Project $project)
+    public function edit(Project $project)
     {
     	return view('app.tasks.create', ['project' => $project, 'types' => $this->types, 'tags' => $project->tags]);
     }

@@ -49,7 +49,9 @@
     padding: 6px;
 }
 
-/** Bootstrap select **/
+/**********************
+ *  Bootstrap Select  *
+ **********************/
 .bootstrap-select
 {
 	background-color: transparent;
@@ -84,8 +86,9 @@
 	padding-top: 5px;
 	padding-bottom: 5px;
 }
-
-/** Checklist **/
+/*********************
+ *  Checklist Items  *
+ *********************/
 div.checklist-input
 {
 	width: 100%;
@@ -146,3 +149,29 @@ div.checklist-input.focus-checklist:hover .remove-checklist
 	display: none;
 	cursor: pointer;
 }
+
+/*******************
+ *  Tasks Columns  *
+ *******************/
+ div.task-input
+ {
+ 	margin-bottom: 10px;
+ 	display: none;
+ }
+
+ div.tasks-column
+ {
+ 	height: auto;
+ }
+ div.tasks-column .header
+ {
+ 	color: #FFF;
+ 	height: 40px;
+ 	line-height: 40px;
+ 	text-align: center;
+ }
+ div.tasks-column .tasks-body
+ {
+ 	min-height: 400px;
+ 	padding: 10px;
+ }

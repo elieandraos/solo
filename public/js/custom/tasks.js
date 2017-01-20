@@ -1,6 +1,57 @@
 $(document).ready(function(){
+	initTaskColumns();
 	initChecklist();
 });
+
+function initTaskColumns()
+{
+	$("body").on('click', '.add-task', function(){
+		insertTask($(this));
+	})
+
+	$("body").on('keyup', 'input.task-name', function(e){
+		if(e.which == 27) {
+	        hideTaskInput($(this));
+	    }
+	})
+
+	$("body").on('blur', 'input.task-name', function(e){
+	    hideTaskInput($(this));
+	})
+
+	$("body").on('keypress', 'input.task-name', function(e){
+		if(e.which == 13) {
+			e.preventDefault();
+			var _form = $(this).closest('form');
+	        saveTask(_form);
+	        hideTaskInput($(this));
+	    }
+	})
+
+	var insertTask = function(_button){
+		$(_button).hide();
+		$(_button).closest('.tasks-body').find('.task-input').show().find('input.task-name').focus();
+	}
+
+	var hideTaskInput = function (_input){
+		$(_input).val('').closest('.tasks-body').find('.task-input').hide();
+	    $(_input).closest('.tasks-body').find('.add-task').show();
+	}
+
+	var saveTask = function(_form)
+	{
+		$.ajax({
+            method: 'POST',
+            url: $(_form).attr('action'),
+            data: $(_form).serialize(),
+            success: function(response){
+            	
+            }
+        });
+
+	}
+
+}
 
 function initChecklist()
 {

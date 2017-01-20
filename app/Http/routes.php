@@ -31,7 +31,8 @@ Route::group(['middleware' => ['auth']], function(){
 	Route::post('/projects/{projectId}/update', ['uses' => 'ProjectController@update', 'as' => 'projects.update']);
 	//tasks
 	Route::get('/projects/{projectId}/tasks', ['uses' => 'TaskController@index', 'as' => 'tasks.index']);
-	Route::get('/projects/{projectId}/tasks/create', ['uses' => 'TaskController@create', 'as' => 'tasks.create']);
+	Route::post('/projects/{projectId}/tasks/store', ['uses' => 'TaskController@store', 'as' => 'tasks.store']);
+	//Route::get('/projects/{projectId}/tasks/{taskId}/edit', ['uses' => 'TaskController@edit', 'as' => 'tasks.edit']);
 });
 
 

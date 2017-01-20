@@ -7,11 +7,11 @@
         </div>
 
 		<div class="panel-body">
-            @foreach($projects as $project)
-            	<div class="row">
-            		@include('app.projects._card')
-            	</div>
-            @endforeach
+            <div class="row">
+                @foreach($projects as $project)
+                	@include('app.projects._card')	
+                @endforeach
+            </div>
 
             <a href="{!! route('projects.create') !!}">
                 <button type="button" class="btn btn-floating btn-primary pull-xs-right" data-toggle="tooltip" data-original-title="Add Project">
