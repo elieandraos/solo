@@ -14,7 +14,6 @@
                     data-modal-title="Task Details" data-modal-callback="initCreateModal">
                 <i class="icon wb-plus" aria-hidden="true"></i>
             </button> --}}
-          
 		</div>
 	</div>
 @stop

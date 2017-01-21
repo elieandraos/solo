@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Task;
 use App\Models\Type;
 use App\Http\Requests;
 use App\Models\Project;
@@ -33,8 +34,12 @@ class TaskController extends Controller
      */
     public function store(Request $request, Project $project)
     {
-        dd($request->all());
-        return;
+        $task = $project->tasks()->create([
+            'name'          => $request->get('name'),
+            'type_id'       => $request->get('type_id'),
+            'start_date'    => date('Y-m-d'),
+        ]);
+        return response()->json(['id' => $task->id, 'type' => $task->type->id, 'project' => $project->id ]);
     }
 
     /**
@@ -46,5 +51,17 @@ class TaskController extends Controller
     public function edit(Project $project)
     {
     	return view('app.tasks.create', ['project' => $project, 'types' => $this->types, 'tags' => $project->tags]);
+    }
+
+    /**
+     * Displays the task card.
+     * 
+     * @param Project $project 
+     * @param Task $task 
+     * @return type
+     */
+    public function display(Project $project, Task $task)
+    {
+        return view('app.tasks._card', ['task' => $task]);
     }
 }

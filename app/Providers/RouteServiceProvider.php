@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Models\Task;
 use App\Models\Project;
 use Illuminate\Routing\Router;
 use Illuminate\Foundation\Support\Providers\RouteServiceProvider as ServiceProvider;
@@ -29,6 +30,10 @@ class RouteServiceProvider extends ServiceProvider
 
         $router->model('projectId', 'App\Models\Project', function($value){
             return Project::findOrFail($value);
+        });
+
+        $router->model('taskId', 'App\Models\Task', function($value){
+            return Task::findOrFail($value);
         });
     }
 

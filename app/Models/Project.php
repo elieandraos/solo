@@ -64,5 +64,19 @@ class Project extends Model
         return $end->diffInDays($now);
     }
 
+    /**
+     * Get the project tasks by type.
+     * 
+     * @param type $type 
+     * @return type
+     */
+    public function taskByType($type)
+    {
+        if(!$type)
+            return null;
+
+        return $this->tasks()->where('type_id', '=', $type)->get();
+    }
+
 
 }

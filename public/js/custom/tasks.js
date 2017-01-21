@@ -45,10 +45,26 @@ function initTaskColumns()
             url: $(_form).attr('action'),
             data: $(_form).serialize(),
             success: function(response){
-            	
+            	loadTask(response.id, response.type, response.project);
             }
         });
+	}
 
+	var loadTask = function(taskId, typeId, projectId)
+	{
+		var _id = "task-" + taskId;
+		var _url = "/projects/" + projectId + "/tasks/" + taskId + "/display";
+
+		if(!$("div#task-"+taskId).length)
+			$(".tasks-list.type-" + typeId).append("<div id='" + _id + "'></div>");
+
+		$.ajax({
+            method: 'GET',
+            url: _url,
+            success: function(response){
+            	$("div#task-"+taskId).html(response);
+            }
+        });
 	}
 
 }

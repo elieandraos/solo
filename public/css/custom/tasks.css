@@ -175,3 +175,25 @@ div.checklist-input.focus-checklist:hover .remove-checklist
  	min-height: 400px;
  	padding: 10px;
  }
+
+ /***************
+ *  Tasks Card  *
+ ****************/
+ .task-card
+ {
+ 	display: block;
+ 	padding: 10px;
+ 	background-color: #FFF;
+ 	margin-bottom: 15px;
+ 	border: 1px solid #E8F1F8;
+ 	border-radius: 5px;
+ }
+.task-card:hover
+{
+	text-decoration: none;
+}
+ .task-card strong
+ {
+ 	color: #000;
+ 	font-weight: 400;
+ }

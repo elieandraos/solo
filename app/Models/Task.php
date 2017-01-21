@@ -21,6 +21,16 @@ class Task extends Model
     }
 
     /**
+     * Type relation.
+     * 
+     * @return type
+     */
+    public function type()
+    {
+        return $this->belongsTo('App\Models\Type');
+    }
+
+    /**
      * Checklist relation.
      * 
      * @return type

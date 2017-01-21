@@ -14,8 +14,22 @@ class TypesTableSeeder extends DatabaseSeeder
     {
         $this->cleanUp('types');
 
-        Type::create(['name' => 'Open']);
-        Type::create(['name' => 'In Progress']);
-        Type::create(['name' => 'Completed']);
+        Type::create([
+            'name'  => 'Open',
+            'color' => 'bg-red-400',
+            'icon'  => 'wb-signal',
+        ]);
+
+        Type::create([
+            'name'  => 'In Progress',
+            'color' => 'bg-indigo-400',
+            'icon'  => 'wb-graph-up',
+        ]);
+
+        Type::create([
+            'name'  => 'Completed',
+            'color' => 'bg-green-400',
+            'icon'  => 'wb-check-circle',
+        ]);
     }
 }
