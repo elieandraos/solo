@@ -32,7 +32,7 @@ Route::group(['middleware' => ['auth']], function(){
 	//tasks
 	Route::get('/projects/{projectId}/tasks', ['uses' => 'TaskController@index', 'as' => 'tasks.index']);
 	Route::post('/projects/{projectId}/tasks/store', ['uses' => 'TaskController@store', 'as' => 'tasks.store']);
-	//Route::get('/projects/{projectId}/tasks/{taskId}/edit', ['uses' => 'TaskController@edit', 'as' => 'tasks.edit']);
+	Route::get('/projects/{projectId}/tasks/{taskId}/edit', ['uses' => 'TaskController@edit', 'as' => 'tasks.edit']);
 	Route::get('/projects/{projectId}/tasks/{taskId}/display', ['uses' => 'TaskController@display', 'as' => 'tasks.display']);
 });
 

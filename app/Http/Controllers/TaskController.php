@@ -48,9 +48,9 @@ class TaskController extends Controller
      * @param Project $project 
      * @return type
      */
-    public function edit(Project $project)
+    public function edit(Project $project, Task $task)
     {
-    	return view('app.tasks.create', ['project' => $project, 'types' => $this->types, 'tags' => $project->tags]);
+    	return view('app.tasks.edit', ['project' => $project, 'task' =>  $task, 'types' => $this->types, 'tags' => $project->tags]);
     }
 
     /**
@@ -62,6 +62,6 @@ class TaskController extends Controller
      */
     public function display(Project $project, Task $task)
     {
-        return view('app.tasks._card', ['task' => $task]);
+        return view('app.tasks._card', ['project' => $project, 'task' => $task]);
     }
 }

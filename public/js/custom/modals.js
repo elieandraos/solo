@@ -8,7 +8,7 @@ $(document).ready(function(){
 function initModalsEvents()
 {
 	//load any url (GET request) inside a modal window
-	$("body").on("click", "button[data-modal='remote']", function() {
+	$("body").on("click", "[data-modal='remote']", function() {
 		ajaxifyButtonLinks($(this));
 		return false;
 	});
